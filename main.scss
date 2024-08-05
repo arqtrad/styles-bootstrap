@@ -842,6 +842,29 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 
+// PageFind {{{2
+:root {
+  --pagefind-ui-primary: var(--bs-body-color) !important;
+  --pagefind-ui-text: var(--bs-body-color) !important;
+  --pagefind-ui-background: var(--bs-body-bg) !important;
+  --pagefind-ui-border: var(--bs-border-color-translucent) !important;
+  --pagefind-ui-tag: var(--bs-border-color-translucent) !important;
+  --pagefind-ui-font: var(--bs-body-font-family) !important;
+}
+
+#search,
+.pagefind-ui,
+.pagefind-ui__form,
+.pagefind-ui__search-input {
+  font-size: var(--bs-body-font-size) !important;
+}
+
+.pagefind-ui__search-input {
+  font-family: $font-family-narrow !important;
+  font-weight: inherit !important;
+}
+
+
 // Custom classes {{{2
 // hero {{{3
 .hero-home {
