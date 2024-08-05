@@ -495,10 +495,6 @@ q {
   }
 }
 
-#bibliography {
-  @extend .h2;
-}
-
 // Bootstrap Classes {{{2
 // Masthead {{{3
 .masthead,
@@ -680,6 +676,13 @@ h5 { // semantic emulation of .newthought
 }
 
 // CSL {{{3
+#bibliography {
+  @extend .w-100;
+  h2 {
+    @extend .text-start;
+  }
+}
+
 .hanging-indent .csl-entry {
   @extend .my-3;
   @extend .ps-4;
