@@ -935,4 +935,25 @@ label.margin-toggle:not(.sidenote-number) {
   color: var(--bs-body-color) !important;
   text-shadow: 1px 1px var(--bs-body-background) !important;
 }
+
+
+// LeafletJS {{{3
+#map {
+  width: 100%;
+  height: auto;
+}
+
+article > #map { // Main list
+  max-width: 100vh;
+  aspect-ratio: 5 / 4;
+}
+
+#map.card-img-top {
+  aspect-ratio: 1 / 1;
+}
+
+.leaflet-control-zoom a {
+  @extend .text-decoration-none;
+}
+
 // vim: shiftwidth=2 tabstop=2 expandtab foldmethod=marker nowrap
