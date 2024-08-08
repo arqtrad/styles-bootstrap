@@ -209,7 +209,7 @@ $legend-font-weight:   500;
 // @import "bootstrap/scss/toasts";
 // @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
+@import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas"; // Requires transitions
@@ -950,6 +950,14 @@ article > #map { // Main list
 
 #map.card-img-top {
   aspect-ratio: 1 / 1;
+}
+
+.leaflet-popup-content-wrapper {
+  @extend .popover;
+  .leaflet-popup-content {
+    @extend small;
+    margin: 0;
+  }
 }
 
 .leaflet-control-zoom a {
