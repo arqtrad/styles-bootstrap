@@ -209,7 +209,7 @@ $legend-font-weight:   500;
 // @import "bootstrap/scss/toasts";
 // @import "bootstrap/scss/modal"; // Requires transitions
 // @import "bootstrap/scss/tooltip";
-// @import "bootstrap/scss/popover";
+@import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas"; // Requires transitions
@@ -908,7 +908,7 @@ label.margin-toggle:not(.sidenote-number) {
   @extend .row;
   @extend .row-cols-md-2;
   @extend .row-cols-lg-3;
-  @extend .row-cols-xl-6;
+  @extend .row-cols-xl-5;
   @extend .g-3;
   @extend .mx-5;
   @extend .justify-content-center;
@@ -958,4 +958,33 @@ label.margin-toggle:not(.sidenote-number) {
   color: var(--bs-body-color) !important;
   text-shadow: 1px 1px var(--bs-body-background) !important;
 }
+
+
+// LeafletJS {{{3
+#map {
+  width: 100%;
+  height: auto;
+}
+
+article > #map { // Main list
+  max-width: 100vh;
+  aspect-ratio: 5 / 4;
+}
+
+#map.card-img-top {
+  aspect-ratio: 1 / 1;
+}
+
+.leaflet-popup-content-wrapper {
+  @extend .popover;
+  .leaflet-popup-content {
+    @extend small;
+    margin: 0;
+  }
+}
+
+.leaflet-control-zoom a {
+  @extend .text-decoration-none;
+}
+
 // vim: shiftwidth=2 tabstop=2 expandtab foldmethod=marker nowrap
