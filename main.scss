@@ -977,13 +977,13 @@ body.splash main {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-}
-
-body.splash .masthead {
-  ul.nav,
-  #search {
-    @include media-breakpoint-down(lg) {
-      display: none !important;
+  .page-footer,
+  .masthead {
+    ul.nav,
+    #search {
+      @include media-breakpoint-down(lg) {
+        display: none !important;
+      }
     }
   }
 }
