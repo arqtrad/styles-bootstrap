@@ -239,9 +239,13 @@ body {
     @extend .px-3;
     @extend .py-1;
     @extend .border-bottom;
-    z-index: $zindex-fixed;
-    background-color: inherit;
   }
+}
+
+body > header,
+.page-footer {
+  z-index: $zindex-fixed;
+  background-color: inherit;
 }
 
 h2 {
@@ -968,6 +972,29 @@ label.margin-toggle:not(.sidenote-number) {
 
 
 // LeafletJS {{{3
+body.splash,
+body.splash main {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body.splash .masthead {
+  ul.nav,
+  #search {
+    @include media-breakpoint-down(lg) {
+      display: none !important;
+    }
+  }
+}
+
+body.splash > .container-fluid:last-of-type {
+  background-color: inherit;
+  .page-footer {
+    @extend .mt-0;
+  }
+}
+
 #map {
   width: 100%;
   height: 100%;
