@@ -1006,9 +1006,17 @@ body.splash > .container-fluid:last-of-type {
 
 .leaflet-popup-content-wrapper {
   @extend .popover;
+  background-color: var(--bs-body-bg) !important;
   .leaflet-popup-content {
     @extend small;
     margin: 0;
+    .popover-header {
+      font-family: $font-family-unb !important;
+      @extend .fw-bold;
+    }
+    .popover-body {
+      font-family: $font-family-narrow !important;
+    }
   }
 }
 
