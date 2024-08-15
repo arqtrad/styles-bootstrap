@@ -320,7 +320,8 @@ h3 {
 }
 
 article > h2,
-article > section > h2 {
+article > section > h2,
+h2.tl-headline {
   @extend .text-center;
   color: $primary;
   @media (prefers-color-scheme: dark) {
@@ -955,6 +956,13 @@ label.margin-toggle:not(.sidenote-number) {
 
 // TimelineJS {{{3
 .tl-timeline,
+.tl-timenav-slider,
+.tl-sidenav-title {
+  font-family: $font-family-narrow !important;
+  font-size: 1.3rem !important;
+}
+
+.tl-timeline,
 .tl-slider-background {
   background-color: var(--bs-body-background) !important;
 }
@@ -970,6 +978,27 @@ label.margin-toggle:not(.sidenote-number) {
   text-shadow: 1px 1px var(--bs-body-background) !important;
 }
 
+.tl-text-headline-container > h2.tl-headline,
+h2.tl-headline-title {
+  font-family: $headings-font-family !important;
+  font-variant-numeric: lining-nums !important;
+  text-transform: unset !important;
+  @extend .text-start;
+  color: $primary !important;
+  @media (prefers-color-scheme: dark) {
+    color: $light !important;
+  }
+}
+
+.tl-timemarker-text > h2.tl-headline,
+.tl-timeline .tl-headline-date,
+.tl-timeline h3.tl-headline-date {
+  @extend .fw-bold;
+}
+
+.tl-timeline p {
+  font-family: $font-family-unb !important;
+}
 
 // LeafletJS {{{3
 body.splash,
