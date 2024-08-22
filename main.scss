@@ -647,6 +647,12 @@ article > section:not(.wide),
   }
 }
 
+article .wide {
+  @include media-breakpoint-up(lg) {
+    width: 150% !important;
+  }
+}
+
 .has-infobox {
   @extend .col;
   @extend .col-lg-5; // Accommodates .sidenote
