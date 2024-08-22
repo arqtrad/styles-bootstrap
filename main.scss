@@ -478,6 +478,10 @@ q {
   }
 }
 
+blockquote p {
+  @extend .offset-1;
+}
+
 // IDs {{{2
 #hero {
   @extend .d-flex;
