@@ -649,7 +649,7 @@ article > section:not(.wide),
 
 article .wide {
   @include media-breakpoint-up(lg) {
-    width: 150% !important;
+    width: 100% !important;
   }
 }
 
