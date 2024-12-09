@@ -306,8 +306,7 @@ main p,
 
 h1,
 h4,
-h5,
-h6 {
+h5 {
   @extend .w-auto;
   @extend .fw-light;
 }
@@ -318,6 +317,13 @@ h2,
 h3 {
   font-family: $headings-font-family;
   font-variant-numeric: lining-nums;
+}
+
+h6 {
+  @extend .w-auto;
+  @extend .fw-normal;
+  @extend .text-start;
+  font-family: $font-family-base;
 }
 
 article > h2,
