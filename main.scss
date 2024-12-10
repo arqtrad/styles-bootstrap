@@ -235,17 +235,6 @@ $legend-font-weight:   500;
 body {
   font-variant-numeric: oldstyle-nums proportional-nums;
   counter-reset: sidenote-counter;
-  > header {
-    @extend .px-3;
-    @extend .py-1;
-    @extend .border-bottom;
-  }
-}
-
-body > header,
-.page-footer {
-  z-index: $zindex-fixed;
-  background-color: inherit;
 }
 
 h2 {
@@ -312,6 +301,7 @@ h5 {
 }
 
 .subtitle,
+.lining-nums,
 h1,
 h2,
 h3 {
@@ -873,12 +863,33 @@ label.margin-toggle:not(.sidenote-number) {
 
 // Custom classes {{{2
 // hero {{{3
+body > header,
+.page__hero--overlay header {
+  @extend .px-3;
+  @extend .py-1;
+  @extend .border-bottom;
+}
+
+body > header,
+.page__hero--overlay header,
+.page-footer {
+  z-index: $zindex-fixed;
+  background-color: var(--bs-body-bg);
+}
+
+.page__hero--overlay {
+  height: 100vh !important;
+  @media (prefers-color-scheme: dark) {
+    opacity: 80%;
+  }
+  footer {
+    @extend .mt-0;
+  }
+}
+
 .hero-home {
   @include media-breakpoint-up(lg) {
     min-height: 50vh;
-  }
-  @media (prefers-color-scheme: dark) {
-    opacity: 80%;
   }
   &.suppress-title {
     aspect-ratio: 1.9 / 1;
@@ -888,10 +899,18 @@ label.margin-toggle:not(.sidenote-number) {
   }
 }
 
-.hero__caption {
+.skip-hero {
+  --bs-icon-link-transform: translate3d(0, .25rem, 0);
+}
+
+.over-map {
   @extend .position-absolute;
-  @extend .bottom-0;
-  @extend .end-0;
+  @extend .w-100;
+  bottom: 5rem;
+  z-index: 1000;
+}
+
+.hero__caption {
   @extend .px-3;
   @extend .text-end;
   @extend .opacity-50;
@@ -1024,29 +1043,6 @@ h2.tl-headline-title {
 }
 
 // LeafletJS {{{3
-body.splash,
-body.splash main {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  .page-footer,
-  .masthead {
-    ul.nav,
-    #search {
-      @include media-breakpoint-down(lg) {
-        display: none !important;
-      }
-    }
-  }
-}
-
-body.splash > .container-fluid:last-of-type {
-  background-color: inherit;
-  .page-footer {
-    @extend .mt-0;
-  }
-}
-
 #map {
   width: 100%;
   height: 100%;
