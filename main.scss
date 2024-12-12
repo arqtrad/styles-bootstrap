@@ -619,6 +619,10 @@ blockquote > footer {
   @extend .border-top;
 }
 
+div.mt-0 > footer.page-footer {
+  @extend .mt-0;
+}
+
 // Tufte, crossref and CSL classes {{{2
 // Columns {{{3
 main {
@@ -659,8 +663,15 @@ article .wide {
   @extend .col-lg-5; // Accommodates .sidenote
 }
 
-.lead {
+.page__title .lead,
+.page__title--overlay .lead {
+  @extend .container;
   @extend .mx-auto;
+}
+
+body.splash .lead,
+body.splash h1 {
+  @extend .text-center;
 }
 
 // typography {{{3
@@ -903,6 +914,18 @@ body.splash .page__title--overlay,
 .page__title.splash,
 .page__title--overlay.splash {
   @extend .h-100;
+}
+
+body.splash .page__title,
+body.splash .page__title--overlay {
+  height: 100vh !important;
+}
+
+body.map {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .w-100;
+  @extend .h-100;
   height: 100vh !important;
 }
 
@@ -917,7 +940,6 @@ body.splash .page__title--overlay,
   @extend .align-items-center;
   h1 {
     @extend .w-100;
-    @extend .text-center;
     @extend .display-1;
     .subtitle {
       @extend .d-block;
