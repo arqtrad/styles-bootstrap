@@ -940,6 +940,8 @@ body > header,
 }
 
 .hero__caption {
+  @extend .align-self-end;
+  @extend .align-self-bottom;
   @extend .px-3;
   @extend .text-end;
   @extend .opacity-50;
