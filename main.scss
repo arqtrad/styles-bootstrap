@@ -933,7 +933,27 @@ body.splash .page__title--overlay,
 }
 
 .skip-hero {
-  --bs-icon-link-transform: translate3d(0, .25rem, 0);
+  @extend .mt-auto;
+  @extend .mb-1;
+  @extend .align-self-center;
+  display: none;
+  a {
+    @extend .my-3;
+    @extend .link-secondary;
+    @extend .link-opacity-75;
+    @extend .link-opacity-50-hover;
+    @extend .icon-link;
+    @extend .icon-link-hover;
+    @extend .display-1;
+    --bs-icon-link-transform: translate3d(0, .25rem, 0);
+  }
+}
+
+body.splash {
+  .search,
+  .skip-hero {
+    display: flex;
+  }
 }
 
 .over-map {
