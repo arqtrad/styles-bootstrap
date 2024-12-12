@@ -868,32 +868,56 @@ label.margin-toggle:not(.sidenote-number) {
 // Custom classes {{{2
 // hero {{{3
 body > header,
-.page__hero header,
-.page__hero--overlay header {
+.page__title header,
+.page__title--overlay header {
   @extend .px-3;
   @extend .py-1;
   @extend .border-bottom;
 }
 
 body > header,
-.page__hero header,
-.page__hero--overlay header,
+.page__title header,
+.page__title--overlay header,
 .page-footer {
   z-index: $zindex-fixed;
   background-color: var(--bs-body-bg);
 }
 
-.page__hero,
-.page__hero--overlay {
+.page__title,
+.page__title--overlay {
+  @extend .d-flex;
+  @extend .flex-column;
+  @extend .w-100;
+  background-size: cover;
+  background-position: center;
   &.splash {
+    @extend .h-100;
     height: 100vh !important;
   }
-  background-size: cover;
   @media (prefers-color-scheme: dark) {
     opacity: 80%;
   }
   footer {
     @extend .mt-0;
+  }
+}
+
+.hero-container {
+  @extend .container;
+  @extend .py-5;
+  @extend .h-100;
+  @extend .d-flex;
+  @extend .align-self-stretch;
+  @extend .flex-column;
+  @extend .justify-content-center;
+  @extend .align-items-center;
+  h1 {
+    @extend .w-100;
+    @extend .text-center;
+    @extend .display-1;
+    .subtitle {
+      @extend .d-block;
+    }
   }
 }
 
