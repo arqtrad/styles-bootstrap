@@ -379,24 +379,26 @@ tfoot,
 }
 
 // page header {{{3
-.site-title {
+.navbar-brand {
   @extend .lh-1;
   @extend .fs-5;
-  @extend .text-decoration-none;
   @extend .text-primary-emphasis;
   @extend .link-body-emphasis;
   font-family: $headings-font-family;
   .site-subtitle {
     @extend .fst-italic;
-    padding-left: 0.5rem !important;
   }
+}
+
+.action {
+  @extend .text-center;
 }
 
 .lead {
   @extend .fw-medium;
 }
 
-#site-nav ul,
+ul.navbar-nav,
 .sidebar,
 .author__profile,
 .toc,
@@ -410,7 +412,7 @@ tfoot,
   }
 }
 
-#site-nav ul {
+ul.navbar-nav {
   @extend .fs-5;
 }
 
@@ -514,7 +516,6 @@ blockquote p {
 
 // Bootstrap Classes {{{2
 // Masthead {{{3
-.masthead,
 .page-footer {
   @extend .d-flex;
   @extend .flex-wrap;
@@ -524,34 +525,15 @@ blockquote p {
   @extend .px-3;
 }
 
-ul.nav,
-.site-title {
-  @extend .d-flex;
-  @extend .align-items-center;
+nav.navbar {
+  @extend .mt-2;
+}
+
+ul.navbar-nav {
   @extend .mb-3;
   @extend .mb-lg-1;
   @extend .me-2;
-}
-
-ul.nav {
-  @extend .col-12;
-  @extend .col-lg-auto;
-  @extend .mx-lg-3;
-  @extend .justify-content-end;
-  li {
-    @extend .mx-auto;
-    @extend .mx-lg-0;
-    @include media-breakpoint-down(sm) {
-      width: 100%;
-      border-bottom: 0.5px dotted $secondary;
-    }
-  }
-  a {
-    @extend .link-secondary;
-    @include media-breakpoint-down(sm) {
-      padding-left: 0;
-    }
-  }
+  @extend .my-sm-2;
   @include media-breakpoint-down(md) {
     border-top: 1px solid $secondary;
     border-bottom: 1px solid $secondary;
@@ -559,10 +541,25 @@ ul.nav {
   }
 }
 
-.site-title {
-  .site-subtitle {
-    @extend .d-inline;
-    @extend .ps-3;
+li.nav-item {
+  @extend .mx-auto;
+  @extend .mx-lg-0;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+    border-bottom: 0.5px dotted $secondary;
+  }
+  a {
+    @extend .link-secondary;
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+    }
+  }
+}
+
+.site-subtitle {
+  @extend .d-inline;
+  @include media-breakpoint-down (md) {
+    display: none !important;
   }
 }
 
@@ -974,7 +971,9 @@ body.map {
 body.splash {
   .search,
   .skip-hero {
-    display: flex;
+    @include media-breakpoint-up(lg) {
+      display: flex;
+    }
   }
 }
 
@@ -983,6 +982,9 @@ body.splash {
   @extend .w-100;
   bottom: 5rem;
   z-index: 1000;
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
 .hero__caption {
