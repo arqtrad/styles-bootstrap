@@ -238,12 +238,17 @@ h1,
 h2 {
   font-family: $headings-font-family;
   font-variant-numeric: lining-nums;
+  color: $primary;
+  @media (prefers-color-scheme: dark) {
+    color: $light;
+  }
 }
 
-section > h2 {
-  @extend .display-5;
+h2 {
   @extend .mt-5;
   @extend .mb-3;
+  @extend .display-5;
+  @extend .fw-normal;
 }
 
 h3,
@@ -265,10 +270,6 @@ article > h2,
 article > section > h2,
 h2.tl-headline {
   @extend .text-center;
-  color: $primary;
-  @media (prefers-color-scheme: dark) {
-    color: $light;
-  }
 }
 
 article {
@@ -360,7 +361,11 @@ ul.navbar-nav,
 ul.navbar-nav {
   @extend .lh-1;
   @extend .fs-5;
-  padding-bottom: var(--bs-navbar-brand-padding-y);
+  @include media-breakpoint-up(xl) {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: var(--bs-navbar-brand-padding-y);
+  }
 }
 
 .subtitle {
@@ -1064,6 +1069,7 @@ h2.tl-headline-title {
   font-family: $headings-font-family !important;
   font-variant-numeric: lining-nums !important;
   text-transform: unset !important;
+  font-size: 3rem !important;
   @extend .text-start;
   color: $primary !important;
   @media (prefers-color-scheme: dark) {
