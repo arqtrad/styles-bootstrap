@@ -163,6 +163,7 @@ $legend-font-weight:   400;
 // general {{{3
 * {
   transition: 0.3s;
+  font-variant-ligatures: common-ligatures discretionary-ligatures historical-ligatures contextual-ligatures;
 }
 
 body {
@@ -620,6 +621,7 @@ article .wide {
 .page__title--overlay .lead {
   @extend .container;
   @extend .mx-auto;
+  @extend .fs-2;
 }
 
 body.splash .lead,
