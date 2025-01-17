@@ -905,7 +905,6 @@ body.map {
 }
 
 .suppress-title {
-  aspect-ratio: 1.9 / 1;
   h1 {
     @extend .d-none;
   }
@@ -925,6 +924,9 @@ body.map {
     @extend .icon-link-hover;
     @extend .display-1;
     --bs-icon-link-transform: translate3d(0, .25rem, 0);
+    @media (prefers-color-scheme: dark) {
+      color: $light !important;
+    }
   }
 }
 
