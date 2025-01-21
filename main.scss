@@ -1045,6 +1045,14 @@ body.splash {
   font-size: 1.3rem !important;
 }
 
+.tl-timenav {
+  background-color: var(--bs-body-bg) !important;
+}
+
+.tl-timemarker-content-container {
+  background-color: var(--bs-secondary-bg) !important;
+}
+
 .tl-timeline,
 .tl-slider-background {
   background-color: var(--bs-body-background) !important;
