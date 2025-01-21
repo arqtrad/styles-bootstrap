@@ -268,8 +268,7 @@ h6 {
 }
 
 article > h2,
-article > section > h2,
-h2.tl-headline {
+article > section > h2 {
   @extend .text-center;
 }
 
@@ -1074,7 +1073,6 @@ h2.tl-headline-title {
   font-variant-numeric: lining-nums !important;
   text-transform: unset !important;
   font-size: 3rem !important;
-  @extend .text-start;
   color: $primary !important;
   @media (prefers-color-scheme: dark) {
     color: $light !important;
@@ -1085,6 +1083,7 @@ h2.tl-headline-title {
 .tl-timeline .tl-headline-date,
 .tl-timeline h3.tl-headline-date {
   @extend .fw-bold;
+  @extend .mt-0;
 }
 
 .tl-timeline p {
