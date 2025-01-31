@@ -270,6 +270,7 @@ h6 {
 article > h2,
 article > section > h2 {
   @extend .text-center;
+  @extend .clearfix;
 }
 
 article {
@@ -466,7 +467,8 @@ blockquote p {
   }
 }
 
-#main {
+#main,
+.sidebar {
   @extend .mt-5;
 }
 
@@ -593,22 +595,13 @@ article {
   @extend .g-3;
 }
 
-article > section:not(.wide),
+article > section,
 .lead {
   @extend .col-lg-8;
-  h2 {
-    @extend .ms-0;
-    @extend .clearfix;
-    @include media-breakpoint-up(lg) {
-      width: 150% !important;
-    }
-  }
 }
 
-article .wide {
-  @include media-breakpoint-up(lg) {
-    width: 100% !important;
-  }
+.wide section {
+  @extend .col-lg-12;
 }
 
 .has-infobox {
@@ -664,13 +657,6 @@ h5 { // semantic emulation of .newthought
 }
 
 // CSL {{{3
-#bibliography {
-  @extend .w-100;
-  h2 {
-    @extend .text-start;
-  }
-}
-
 .hanging-indent .csl-entry {
   @extend .my-3;
   @extend .ps-4;
