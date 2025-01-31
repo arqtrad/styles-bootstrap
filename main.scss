@@ -988,12 +988,16 @@ body.splash {
   @extend .mx-3;
 }
 
-// keywords {{{3
+// misc {{{3
 .keywords,
 .keywords li {
   @extend .d-inline;
   @extend .m-0;
   @extend .p-0;
+}
+
+.smallcaps {
+  font-variant: all-small-caps;
 }
 
 // image {{{3
@@ -1012,7 +1016,7 @@ body.splash {
   @extend .text-body-secondary;
 }
 
-// PageFind {{{3
+// PageFind {{{2
 :root {
   --pagefind-ui-primary: var(--bs-body-color) !important;
   --pagefind-ui-text: var(--bs-body-color) !important;
@@ -1035,7 +1039,7 @@ body.splash {
 }
 
 
-// TimelineJS {{{3
+// TimelineJS {{{2
 .tl-timeline,
 .tl-timenav-slider,
 .tl-sidenav-title {
@@ -1096,7 +1100,7 @@ h2.tl-headline-title {
   font-family: $font-family-sans !important;
 }
 
-// LeafletJS {{{3
+// LeafletJS {{{2
 #map {
   width: 100%;
   height: 100%;
