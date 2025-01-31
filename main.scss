@@ -418,6 +418,18 @@ h3.card-title,
   @extend .text-secondary;
 }
 
+.list-group-item {
+  h3 {
+    font-family: $font-family-narrow;
+    @extend .fw-bold;
+    @extend .fs-4;
+  }
+  h3,
+  p {
+    @extend .mb-0;
+  }
+}
+
 
 // Quote {{{3
 figcaption,
