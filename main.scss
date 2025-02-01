@@ -648,7 +648,8 @@ h5 { // semantic emulation of .newthought
 }
 
 .epigraph {
-  @extend .mt-5;
+  @extend .clearfix;
+  @extend .my-5;
   @extend .col-10;
   @extend .offset-2;
   @extend .col-xl-8;
