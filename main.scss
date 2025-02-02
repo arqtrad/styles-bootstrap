@@ -241,7 +241,7 @@ h2 {
   font-variant-numeric: lining-nums;
   color: $primary;
   @media (prefers-color-scheme: dark) {
-    color: $light;
+    color: var(--bs-primary-text-emphasis);
   }
 }
 
