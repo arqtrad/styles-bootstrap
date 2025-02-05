@@ -154,7 +154,6 @@ $legend-font-weight:   400;
 // Utilities
 @import "bootstrap/scss/utilities/api";
 
-
 /* ==========================================================================
    Custom styles {{{1
    ========================================================================== */
@@ -356,6 +355,10 @@ ul.navbar-nav,
   a {
     @extend .text-decoration-none;
     @extend .link-secondary;
+  }
+  h2,
+  h3 {
+    font-family: $font-family-narrow;
   }
 }
 
@@ -1016,6 +1019,24 @@ body.splash {
   @extend .align-items-center;
   @extend .text-body-secondary;
 }
+
+// Bootstrap TOC {{{2
+nav[data-toggle="toc"] {
+  @extend .sidebar;
+  @extend .sticky-top;
+  @extend .mt-5;
+  @include media-breakpoint-down(md) {
+    position: static;
+    margin-bottom: 3em;
+    .nav .active .nav {
+      display: none;
+    }
+  }
+  & > ul > li {
+    @extend .fw-bold;
+  }
+}
+
 
 // PageFind {{{2
 :root {
