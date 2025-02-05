@@ -360,6 +360,11 @@ ul.navbar-nav,
   h3 {
     font-family: $font-family-narrow;
   }
+  h2 {
+    @extend .fs-4;
+    @extend .fw-bold;
+    @extend .my-1;
+  }
 }
 
 ul.navbar-nav {
@@ -1022,7 +1027,6 @@ body.splash {
 
 // Bootstrap TOC {{{2
 nav[data-toggle="toc"] {
-  @extend .sidebar;
   @extend .sticky-top;
   @extend .mt-5;
   @include media-breakpoint-down(md) {
