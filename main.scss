@@ -439,7 +439,7 @@ h3.card-title,
 }
 
 
-// Quote {{{3
+// Quotes, captions, and other stuff {{{3
 figcaption,
 blockquote > footer {
   @extend .fw-medium;
@@ -456,6 +456,14 @@ q {
 
 blockquote p {
   @extend .offset-1;
+}
+
+code {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-variant: all-small-caps;
+  color: inherit;
 }
 
 // IDs {{{2
