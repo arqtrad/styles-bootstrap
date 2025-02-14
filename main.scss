@@ -173,6 +173,7 @@ body {
 h2 {
   @extend .w-100;
   @extend .mt-5;
+  @extend .mb-3;
 }
 
 table {
@@ -245,8 +246,6 @@ h2 {
 }
 
 h2 {
-  @extend .mt-5;
-  @extend .mb-3;
   @extend .fw-normal;
 }
 
@@ -621,7 +620,9 @@ article {
 }
 
 article > section,
-.lead {
+.lead,
+.page__title .lead,
+.page__title--overlay .lead {
   @extend .col-lg-8;
 }
 
@@ -637,13 +638,17 @@ article > section,
 .page__title .lead,
 .page__title--overlay .lead {
   @extend .container;
-  @extend .mx-auto;
-  @extend .fs-2;
+  @extend .ms-0;
+  @extend .px-0;
+  @extend .fs-3;
 }
 
 body.splash .lead,
-body.splash h1 {
+body.splash h1,
+body.splash article > h2,
+body.splash article > section > h2 {
   @extend .text-center;
+  @extend .mx-auto;
 }
 
 // typography {{{3
