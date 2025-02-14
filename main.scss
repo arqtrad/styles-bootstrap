@@ -247,7 +247,6 @@ h2 {
 h2 {
   @extend .mt-5;
   @extend .mb-3;
-  @extend .display-5;
   @extend .fw-normal;
 }
 
@@ -266,21 +265,20 @@ h6 {
   @extend .text-start;
 }
 
-article > h2,
-article > section > h2 {
-  @extend .text-center;
-  @extend .clearfix;
-}
-
 article {
   font-size: 1.3rem;
   font-family: $font-family-serif;
-  h2:not(first-of-type) {
-    @extend .mt-5;
-  }
   a:not(.btn) {
     color: inherit;
     text-decoration: underline;
+  }
+  & > h2,
+  & > section > h2 {
+    @extend .text-start;
+    @extend .clearfix;
+  }
+  & > section:first-of-type > h2 {
+    @extend .mt-0;
   }
 }
 
@@ -430,7 +428,6 @@ h3.card-title,
   h3 {
     font-family: $font-family-narrow;
     @extend .fw-bold;
-    @extend .fs-4;
   }
   h3,
   p {
