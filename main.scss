@@ -211,6 +211,7 @@ section > figure {
 figcaption,
 blockquote > footer {
   @extend .figure-caption;
+  @extend .p-1;
 }
 
 article figcaption,
@@ -275,6 +276,9 @@ article {
   & > section > h2 {
     @extend .text-start;
     @extend .clearfix;
+    @include media-breakpoint-up(lg) {
+      width: 150% !important;
+    }
   }
   & > section:first-of-type > h2 {
     @extend .mt-0;
@@ -649,6 +653,7 @@ body.splash article > h2,
 body.splash article > section > h2 {
   @extend .text-center;
   @extend .mx-auto;
+  max-width: 100%;
 }
 
 // typography {{{3
@@ -747,7 +752,7 @@ h5 { // semantic emulation of .newthought
 .marginnote {
   @extend .fs-6;
   font-family: $font-family-legend;
-  padding: 1rem;
+  @extend .p-1;
   display: inline;
   @include media-breakpoint-down(md) { // {{{3
     cursor: pointer;
@@ -838,7 +843,7 @@ label.margin-toggle:not(.sidenote-number) {
   @extend .text-secondary;
 }
 
-// subfigures {{{2
+// figures {{{2
 .subfigures > figcaption {
   @extend .col-lg-4;
   @extend .float-lg-end;
@@ -847,6 +852,51 @@ label.margin-toggle:not(.sidenote-number) {
   }
 }
 
+.half,
+.third {
+  img {
+    float: left;
+    clear: none;
+  }
+}
+
+.half img,
+img.half {
+  @include media-breakpoint-up(lg) {
+    width: 50%;
+  }
+}
+
+.third img,
+img.third {
+  @include media-breakpoint-up(lg) {
+    width: 33%;
+  }
+}
+
+.full {
+  @include media-breakpoint-up(lg) {
+    width: 150%;
+    figcaption {
+      margin-right: 33.33%;
+    }
+  }
+}
+
+.align-right {
+  img {
+    @extend .p-1;
+  }
+  @include media-breakpoint-up(lg) {
+    float: right;
+    clear: none;
+    margin-right: -50%;
+    width: 50%;
+    figcaption {
+      width: 100%;
+    }
+  }
+}
 
 // Custom classes {{{2
 // hero {{{3
