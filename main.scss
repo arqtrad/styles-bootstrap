@@ -254,12 +254,14 @@ h3,
 h4,
 h5,
 h6 {
+  color: $primary;
   font-family: $font-family-base;
   font-variant-numeric: lining-nums;
   @extend .fw-light;
 }
 
 h6 {
+  color: $body-color;
   @extend .w-auto;
   @extend .fw-normal;
   @extend .text-start;
@@ -282,6 +284,17 @@ article {
   }
   & > section:first-of-type > h2 {
     @extend .mt-0;
+  }
+  h3 {
+    font-family: $headings-font-family;
+    @extend .fw-normal;
+    @extend .fst-italic;
+    @extend .mt-3;
+  }
+  h4 {
+    font-family: $font-family-serif;
+    font-variant: small-caps;
+    @extend .mt-2;
   }
 }
 
