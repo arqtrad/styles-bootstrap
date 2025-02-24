@@ -240,21 +240,25 @@ h1,
 h2 {
   font-family: $headings-font-family;
   font-variant-numeric: lining-nums;
-  color: $primary;
-  @media (prefers-color-scheme: dark) {
-    color: var(--bs-primary-text-emphasis);
-  }
 }
 
 h2 {
   @extend .fw-normal;
 }
 
+h2,
+h3,
+h4 {
+  color: $primary;
+  @media (prefers-color-scheme: dark) {
+    color: var(--bs-primary-text-emphasis);
+  }
+}
+
 h3,
 h4,
 h5,
 h6 {
-  color: $primary;
   font-family: $font-family-base;
   font-variant-numeric: lining-nums;
   @extend .fw-light;
