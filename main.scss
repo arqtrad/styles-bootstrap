@@ -289,13 +289,13 @@ article {
   & > section:first-of-type > h2 {
     @extend .mt-0;
   }
-  h3 {
+  section > h3 {
     font-family: $headings-font-family;
     @extend .fw-normal;
     @extend .fst-italic;
     @extend .mt-3;
   }
-  h4 {
+  section > h4 {
     font-family: $font-family-serif;
     font-variant: small-caps;
     @extend .mt-2;
