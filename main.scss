@@ -717,6 +717,10 @@ h5 { // semantic emulation of .newthought
   text-indent: -1.3rem;
 }
 
+.has-infobox #bibliography {
+  @extend .w-100;
+}
+
 // Marginalia {{{3
 .aside {
   @extend .col-md-4;
@@ -1075,6 +1079,15 @@ body.splash {
   @extend .mx-3;
 }
 
+.media-block {
+  @extend .container-fluid;
+  @extend .text-center;
+  @extend .mb-5;
+  h2 {
+    @extend .text-center;
+  }
+}
+
 // misc {{{3
 .keywords,
 .keywords li {
@@ -1176,6 +1189,7 @@ nav[data-toggle="toc"] {
 }
 
 .tl-slide-titleslide h2.tl-headline {
+  @extend .text-center;
   font-size: 2.25rem !important;
   color: var(--bs-body-text) !important;
 }
