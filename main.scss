@@ -417,6 +417,9 @@ h3.card-title,
 
 .card-body {
   font-family: $font-family-legend;
+  .btn {
+    font-family: $font-family-sans;
+  }
 }
 
 .card-text {
@@ -1190,7 +1193,7 @@ nav[data-toggle="toc"] {
 
 .tl-slide-titleslide h2.tl-headline {
   @extend .text-center;
-  font-size: 2.25rem !important;
+  font-size: 1.3rem !important;
   color: var(--bs-body-text) !important;
 }
 
