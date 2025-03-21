@@ -214,6 +214,11 @@ blockquote > footer {
   @extend .p-1;
 }
 
+figcaption {
+  font-family: $font-family-legend;
+  @extend .fs-6;
+}
+
 article figcaption,
 blockquote > footer {
   @extend .float-lg-end;
