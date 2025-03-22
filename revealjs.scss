@@ -54,10 +54,6 @@ cite {
   font-style: italic;
 }
 
-.d-none {
-  display: none;
-}
-
 span.smallcaps {
   font-variant: all-small-caps;
   font-variant-numeric: oldstyle-nums;
@@ -65,4 +61,17 @@ span.smallcaps {
 
 h2 {
   font-style: italic;
+}
+
+li::marker {
+  content: "› ";
+}
+
+.slide-hidden {
+  display: none;
+}
+
+.content-bg {
+  padding: 2rem;
+  background-color: rgba(255, 255, 248, 0.5);
 }

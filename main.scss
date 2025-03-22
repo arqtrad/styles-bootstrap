@@ -195,6 +195,14 @@ table {
   @extend .mt-0;
 }
 
+article li::marker {
+  content: "› ";
+}
+
+article section > hr {
+  @extend .d-none;
+}
+
 // figures and quotes {{{3
 section > figure {
   @extend .figure;
@@ -206,6 +214,11 @@ section > figure {
       opacity: 0.8;
     }
   }
+}
+
+video,
+iframe {
+  @extend img;
 }
 
 figcaption,
@@ -885,15 +898,16 @@ label.margin-toggle:not(.sidenote-number) {
 .half,
 .third {
   img {
+    @extend .p-1;
     float: left;
     clear: none;
+    @include media-breakpoint-up(lg) {
+      width: 50%;
+    }
   }
-}
-
-.half img,
-img.half {
-  @include media-breakpoint-up(lg) {
-    width: 50%;
+  figcaption {
+    float: left !important;
+    clear: left;
   }
 }
 
@@ -906,10 +920,8 @@ img.third {
 
 .full {
   @include media-breakpoint-up(lg) {
+    max-width: 150%;
     width: 150%;
-    figcaption {
-      margin-right: 33.33%;
-    }
   }
 }
 
@@ -931,7 +943,7 @@ img.third {
   }
 }
 
-img.outset + figcaption {
+.outset + figcaption {
   @include media-breakpoint-up(lg) {
     margin-right: -50%;
     padding-top: 0 !important;
